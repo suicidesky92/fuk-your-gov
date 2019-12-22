@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+ tor:
+         container_name: tor
+         build:
+                 context: Dockerfiles
+                 dockerfile: tor
+         restart: always
+         hostname: tor
+         #ports:
+         #        - 9051:9050
+ privoxy:
+         container_name: privoxy
+         build:
+                 context: Dockerfiles
+                 dockerfile: privoxy
+         restart: unless-stopped
+         hostname: privoxy
+         ports:
+                 - "127.0.0.1:8119:8118"
+         depends_on:
+                 - tor
+
+                   #networks:
+                   #  default:
+                   #    external:
+                   #      name: br-fuk-ur-gov

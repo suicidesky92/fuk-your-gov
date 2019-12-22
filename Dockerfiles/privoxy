@@ -1,0 +1,12 @@
+FROM debian:bullseye-slim
+
+RUN apt-get update \
+    && apt-get install -y \
+    privoxy
+
+RUN echo "forward-socks4a / tor:9050 ." >> /etc/privoxy/config
+RUN sed -i "s/listen-address/#listen-address/" /etc/privoxy/config
+RUN echo "listen-address 0.0.0.0:8118" >> /etc/privoxy/config
+CMD ["/usr/sbin/privoxy", "--no-daemon", "--pidfile", "/run/privoxy.pid", "--user", "privoxy", "/etc/privoxy/config"]
+
+
