@@ -1,12 +1,11 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update \
-    && apt-get install -y \
+    && apt-get install --no-install-recommends -y \
     tor \
     tor-geoipdb \
     torsocks 
-RUN echo "SocksPort 0.0.0.0:9050" >> /etc/tor/torrc
+RUN echo -e "SocksPort 0.0.0.0:9050\n ExitNodes {FI}" >> /etc/tor/torrc
 RUN echo -e "TorAddress 0.0.0.0\nTorPort 9050\nOnionAddrRange 127.42.42.0/24" > /etc/tor/torsocks.conf
 
 CMD ["/usr/bin/tor"]
-#CMD ["/usr/bin/tor", "--defaults-torrc", "/usr/share/tor/tor-service-defaults-torrc", "-f", "/etc/tor/torrc", "--RunAsDaemon", "0"]

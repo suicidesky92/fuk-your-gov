@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update \
-    && apt-get install -y \
+    && apt-get install --no-install-recommends -y \
     privoxy
 
 RUN echo "forward-socks4a / tor:9050 ." >> /etc/privoxy/config
