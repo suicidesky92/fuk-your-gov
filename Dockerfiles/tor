@@ -7,7 +7,7 @@ RUN apt-get update \
     tor \
     tor-geoipdb \
     torsocks 
-RUN echo "SocksPort 0.0.0.0:9050\n ExitNodes {FI}">> /etc/tor/torrc
+RUN echo "SocksPort 0.0.0.0:9050">> /etc/tor/torrc
 RUN echo "ExitNodes {FI}">> /etc/tor/torrc
 RUN echo "TorAddress 0.0.0.0"> /etc/tor/torsocks.conf
 RUN echo "TorPort 9050"> /etc/tor/torsocks.conf
