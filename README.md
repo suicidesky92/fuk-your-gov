@@ -41,6 +41,27 @@ This plugin has 3 modes of operation:
 2) disables the proxy in the browser. 
 3) all traffic through the proxy (there will be small decreases in speed and response time increases, but if you do not know how to make patterns, this can help you)
 
+### Setup to Telegram:
+
+Click to menu
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-28-44.png)
+
+Advanced section
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-29-10.png)
+
+Chose type of connection
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-29-21.png)
+
+Need custom proxy
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-30-39.png)
+
+Select HTTP proxy
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-30-59.png)
+
+Click save. If you do all right - you may see online status and shield on main page.
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-31-11.png)
+
+
 
 That's all. For more information about FoxyProxy plugin, please contact the plugin developer.
 
