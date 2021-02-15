@@ -75,6 +75,16 @@ Click save. If you do all right - you may see online status and shield on main p
 
 
 
+### Speedtest
+
+#### On
+
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-50-43.png)
+
+#### off
+![aly_text](https://github.com/suicidesky92/fuk-your-gov/raw/master/tutorialpics/Screenshot%20from%202021-02-16%2001-52-05.png)
+
+
 That's all. For more information about FoxyProxy plugin, please contact the plugin developer.
 
 ## IMPORTANT!! Attention! This method does not guarantee the anonymity of visiting sites, moreover, it is not suitable for all sorts of dirty things. It just gives you access to content blocked by your favorite government :)
