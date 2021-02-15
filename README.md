@@ -1,5 +1,11 @@
 # fuk-your-gov - in 8119 you heave tor socks4a-forward. Use privoxy in your browser to be in tor network
 
+### Prepare:
+
+You need installed docker and docker-compose to run this project.
+
+
+
 ### How to build this:
 1) git clone https://github.com/suicidesky92/fuk-your-gov.git # copy the project via git clone
 2) cd fuk-your-gov
