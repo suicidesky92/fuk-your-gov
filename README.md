@@ -19,4 +19,4 @@ Not enough? Need more features?..
 OK!!!
 
 go to Firefox browser, and install plugin FoxyProxy
-![alt text](http://cloud.hacore.ru/s/TQSA4ZaLt6pjBHi/download)
+![alt text](https://raw.githubusercontent.com/suicidesky92/fuk-your-gov/master/tutorialpics/icon.svg)
