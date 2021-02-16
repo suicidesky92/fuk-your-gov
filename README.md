@@ -14,12 +14,26 @@ You need installed docker and docker-compose to run this project.
 5) PROFIT!!!
 
 ### How use:
+Curl over proxy:
 curl -L --proxy 127.0.0.1:8119 http://myblockedsite.com
+
+Git over proxy:
+Global on:
+git config --global http.proxy http://127.0.0.1:8119
+
+Global off:
+git config --global --unset http.proxy
+
+Get proxy state configured at the moment in git:
+git config --global --get http.proxy
+
 
 ### Test:
 curl ifconfig.me # get your real IP
 
 curl -L --proxy 127.0.0.1:8119 ifconfig.me # get you proxy IP
+
+
 
 ### Not enough? Need more features?..
 ### OK!!!
