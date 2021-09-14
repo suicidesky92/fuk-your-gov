@@ -1,0 +1,14 @@
+FROM debian:bullseye-slim
+
+RUN apt-get update && apt-get full-upgrade -y
+
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y \
+    squid apache2-utils
+
+RUN echo "forward-socks5 / tor:9050 ." >> /etc/privoxy/config
+RUN sed -i "s/listen-address/#listen-address/" /etc/privoxy/config
+RUN echo "listen-address 0.0.0.0:8118" >> /etc/privoxy/config
+CMD ["/usr/sbin/privoxy", "--no-daemon", "--pidfile", "/run/privoxy.pid", "--user", "privoxy", "/etc/privoxy/config"]
+
+
