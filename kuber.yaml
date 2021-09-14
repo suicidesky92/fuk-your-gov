@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fug-proxy
+spec:
+  type: LoadBalancer
+  selector:
+    app: fug-proxy
+  ports:
+    - protocol: TCP
+      port: 8118
+      targetPort: 8118
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fuk-your-gov
+spec:
+  selector:
+    matchLabels:
+      app: fug-proxy
+  replicas: 1  # set replica for ip-pool
+  template:
+    metadata:
+      labels:
+        app: fug-proxy
+    spec:
+      containers:
+      - name: tor
+        image: suicidesky92/tor:latest
+        ports:
+        - containerPort: 9050
+      - name: privoxy
+        image: suicidesky92/privoxy:latest
+        ports:
+        - containerPort: 8118
